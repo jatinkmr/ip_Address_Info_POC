@@ -21,7 +21,8 @@ function getLocalIpv4Address() {
 
 // Promisify the https.get to work with async/await
 const getPublicIpv4Address = promisify((callback) => {
-    https.get('https://api.ipify.org?format=json', (resp) => {
+    // https.get('https://api.ipify.org?format=json', (resp) => {
+    https.get('https://api.myip.com', (resp) => {
         let data = '';
 
         resp.on('data', (chunk) => {
